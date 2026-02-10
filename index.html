@@ -68,7 +68,76 @@
     Designed for litigation and disputes teams. No cloud AI. No data reuse. No legal advice.
   </p>
 
-  <a class="cta" href="#">Start a Matter</a>
+    <form action="https://formspree.io/f/maqdqnzk" method="POST" style="max-width: 600px; margin-top: 2rem;">
+  
+    <label>
+      Firm name<br>
+      <input type="text" name="firm_name" required>
+    </label><br><br>
+  
+    <label>
+      Matter reference (optional)<br>
+      <input type="text" name="matter_reference">
+    </label><br><br>
+  
+    <label>
+      Matter type<br>
+      <select name="matter_type" required>
+        <option value="">Select…</option>
+        <option>Commercial litigation</option>
+        <option>Employment</option>
+        <option>Regulatory</option>
+        <option>Personal injury</option>
+        <option>Other</option>
+      </select>
+    </label><br><br>
+  
+    <label>
+      Estimated document count<br>
+      <select name="document_count" required>
+        <option value="">Select…</option>
+        <option>Under 200</option>
+        <option>200–500</option>
+        <option>500–1,500</option>
+        <option>Unsure</option>
+      </select>
+    </label><br><br>
+  
+    <label>
+      Contact name<br>
+      <input type="text" name="contact_name" required>
+    </label><br><br>
+  
+    <label>
+      Work email<br>
+      <input type="email" name="email" required>
+    </label><br><br>
+  
+    <label>
+      Phone (optional)<br>
+      <input type="text" name="phone">
+    </label><br><br>
+  
+    <label>
+      Document transfer preference<br>
+      <input type="radio" name="transfer_pref" value="Upload now" required> Upload documents now<br>
+      <input type="radio" name="transfer_pref" value="Send secure link"> Please send me a secure upload link
+    </label><br><br>
+  
+    <label>
+      Additional context or deadlines<br>
+      <textarea name="notes" rows="4"></textarea>
+    </label><br><br>
+  
+    <label>
+      <input type="checkbox" name="consent" required>
+      I confirm I am authorised to provide these details and understand this does not commit us to proceed.
+    </label><br><br>
+  
+    <button type="submit">Submit matter details</button>
+  
+  </form>
+
 </main>
 
 <footer>
