@@ -68,7 +68,7 @@
     Designed for litigation and disputes teams. No cloud AI. No data reuse. No legal advice.
   </p>
 
-    <form action="https://formspree.io/f/maqdqnzk?next=https://legalchronology.co.uk/thank-you.html" method="POST">
+    <form id="matterForm" style="max-width: 600px; margin-top: 2rem;">
     <input type="hidden" name="_next" value="https://legalchronology.co.uk/thank-you.html">
   
     <label>
@@ -135,9 +135,49 @@
       I confirm I am authorised to provide these details and understand this does not commit us to proceed.
     </label><br><br>
   
-    <button type="submit">Submit matter details</button>
+    <button id="submitBtn" type="submit">Submit matter details</button>
   
   </form>
+<p id="formStatus" style="margin-top: 12px;"></p>
+
+<script>
+  const form = document.getElementById("matterForm");
+  const statusEl = document.getElementById("formStatus");
+  const btn = document.getElementById("submitBtn");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    statusEl.textContent = "";
+    btn.disabled = true;
+    btn.textContent = "Submitting…";
+
+    try {
+      const formData = new FormData(form);
+
+      const res = await fetch("https://formspree.io/f/maqdqnzk", {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (res.ok) {
+        // ✅ Always redirect to YOUR domain
+        window.location.href = "/thank-you.html";
+        return;
+      }
+
+      // If Formspree rejects it, show a polite message
+      statusEl.textContent = "Sorry — something went wrong submitting the form. Please email us and we’ll help immediately.";
+      btn.disabled = false;
+      btn.textContent = "Submit matter details";
+    } catch (err) {
+      statusEl.textContent = "Network error — please try again, or email us.";
+      btn.disabled = false;
+      btn.textContent = "Submit matter details";
+    }
+  });
+</script>
 
 </main>
 
