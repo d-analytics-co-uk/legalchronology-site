@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LegalChronology — Litigation chronologies, built securely</title>
+  <style>
+    :root{
+      --ink:#0f172a;
+      --muted:#334155;
+      --muted2:#64748b;
+      --line:#e2e8f0;
+      --bg:#ffffff;
+      --soft:#f8fafc;
+      --brand:#1e3a8a;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial, sans-serif}
+    .wrap{max-width:1100px;margin:0 auto;padding:28px 20px 64px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:10px 0 26px;border-bottom:1px solid var(--line)}
+    .logo{font-weight:700;letter-spacing:.2px}
+    .nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-size:14px}
+    .nav a:hover{color:var(--ink)}
+    .hero{padding:46px 0 26px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start}
+    h1{font-size:56px;line-height:1.05;margin:0 0 14px}
+    .lead{font-size:18px;line-height:1.7;color:var(--muted);margin:0 0 14px;max-width:58ch}
+    .pillrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .pill{border:1px solid var(--line);background:var(--soft);color:var(--muted);padding:8px 10px;border-radius:999px;font-size:13px}
+    .cta{margin-top:22px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .btn{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;padding:12px 16px;border-radius:10px;font-weight:700}
+    .btn.secondary{background:#fff;color:var(--brand);border:1px solid var(--line)}
+    .trust{font-size:13px;color:var(--muted2)}
+    .card{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:18px;
+      background:var(--soft);
+    }
+    .card h3{margin:0 0 8px;font-size:16px}
+    .card p{margin:0 0 12px;color:var(--muted);font-size:14px;line-height:1.6}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:10px}
+    .step{border:1px solid var(--line);border-radius:12px;background:#fff;padding:14px}
+    .step b{display:block;margin-bottom:6px}
+    .section{margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
+    .box{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fff}
+    .box h4{margin:0 0 8px}
+    .box p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
+    .faq details{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fff;margin-bottom:10px}
+    .faq summary{cursor:pointer;font-weight:700}
+    footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted2);font-size:13px}
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      h1{font-size:44px}
+      .grid,.steps{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">LegalChronology</div>
+      <nav class="nav">
+        <a href="#how">How it works</a>
+        <a href="#security">Security</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn secondary" href="/start.html">Start a Matter</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Litigation chronologies, built securely.</h1>
+        <p class="lead">
+          We prepare professional chronological timelines from complex document bundles — securely processed in the UK,
+          delivered on a fixed-fee basis.
+        </p>
+        <p class="lead" style="margin-top:-6px;">
+          Designed for litigation and disputes teams. No cloud AI. No data reuse. No legal advice.
+        </p>
+
+        <div class="cta">
+          <a class="btn" href="/start.html">Start a Matter</a>
+          <a class="btn secondary" href="mailto:mark@d-analytics.co.uk?subject=LegalChronology%20Enquiry">Email us</a>
+          <span class="trust">Typical reply within one working day.</span>
+        </div>
+
+        <div class="pillrow">
+          <span class="pill">UK processing</span>
+          <span class="pill">Matter-level isolation</span>
+          <span class="pill">Source references for every entry</span>
+          <span class="pill">Human QA</span>
+          <span class="pill">Fixed-fee, predictable delivery</span>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3>What you receive</h3>
+        <p><b>Excel chronology</b> with dated events, parties, and document references.</p>
+        <p><b>Word summary</b> highlighting gaps, conflicts, and “needs lawyer judgment” items.</p>
+        <p><b>Confidence markers</b> separating explicit dates from inferred dates.</p>
+
+        <div class="steps" id="how">
+          <div class="step">
+            <b>1) Submit matter</b>
+            Basic details + preferred transfer method.
+          </div>
+          <div class="step">
+            <b>2) Secure transfer</b>
+            We provide a secure upload link or intake route.
+          </div>
+          <div class="step">
+            <b>3) Delivery</b>
+            Draft chronology returned ready for review.
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="security">
+      <h2 style="margin:0 0 10px;">Security-first by design</h2>
+      <div class="grid">
+        <div class="box">
+          <h4>UK-only processing</h4>
+          <p>Your matter is processed within UK jurisdiction.</p>
+        </div>
+        <div class="box">
+          <h4>No data reuse</h4>
+          <p>Uploaded materials are not used to train or improve external models.</p>
+        </div>
+        <div class="box">
+          <h4>Clear scope</h4>
+          <p>We produce chronologies; you retain all legal judgment and responsibility.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <h2 style="margin:0 0 10px;">FAQ</h2>
+
+      <details>
+        <summary>Is this “AI for lawyers”?</summary>
+        <p style="color:var(--muted);margin:10px 0 0;line-height:1.6;">
+          It’s a done-for-you chronology service. We use automation internally, with human QA,
+          and deliver a professional draft chronology for your review.
+        </p>
+      </details>
+
+      <details>
+        <summary>Do you make disclosure / relevance / privilege decisions?</summary>
+        <p style="color:var(--muted);margin:10px 0 0;line-height:1.6;">
+          No. We do not assess privilege or relevance, and we do not provide legal advice.
+        </p>
+      </details>
+
+      <details>
+        <summary>How do you handle documents and confidentiality?</summary>
+        <p style="color:var(--muted);margin:10px 0 0;line-height:1.6;">
+          Matters are processed in isolation. We aim to minimise access, retain only as required,
+          and provide auditability appropriate for professional services.
+        </p>
+      </details>
+
+      <details>
+        <summary>How do we start?</summary>
+        <p style="color:var(--muted);margin:10px 0 0;line-height:1.6;">
+          Click <a href="/start.html" style="color:var(--brand);font-weight:700;text-decoration:none;">Start a Matter</a>
+          and we’ll reply with next steps for secure transfer.
+        </p>
+      </details>
+    </section>
+
+    <footer>
+      LegalChronology is a service provided by D Analytics Ltd.
+    </footer>
+  </div>
+</body>
+</html>
